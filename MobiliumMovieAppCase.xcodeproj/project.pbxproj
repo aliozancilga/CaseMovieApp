@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		FA949ED726EA60AD00BAA392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949ED626EA60AD00BAA392 /* AppDelegate.swift */; };
 		FA949ED926EA60AD00BAA392 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949ED826EA60AD00BAA392 /* SceneDelegate.swift */; };
-		FA949EDB26EA60AD00BAA392 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949EDA26EA60AD00BAA392 /* ViewController.swift */; };
 		FA949EDE26EA60AD00BAA392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA949EDC26EA60AD00BAA392 /* Main.storyboard */; };
 		FA949EE026EA60B600BAA392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA949EDF26EA60B600BAA392 /* Assets.xcassets */; };
 		FA949EE326EA60B600BAA392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA949EE126EA60B600BAA392 /* LaunchScreen.storyboard */; };
 		FA949EEE26EA60B700BAA392 /* MobiliumMovieAppCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949EED26EA60B700BAA392 /* MobiliumMovieAppCaseTests.swift */; };
 		FA949EF926EA60B700BAA392 /* MobiliumMovieAppCaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949EF826EA60B700BAA392 /* MobiliumMovieAppCaseUITests.swift */; };
+		FA949F0F26EA66EB00BAA392 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949F0E26EA66EB00BAA392 /* RootViewModel.swift */; };
+		FA949F1226EA69F700BAA392 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949F1126EA69F700BAA392 /* RootViewController.swift */; };
+		FA949F1826EA6F9600BAA392 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949F1726EA6F9600BAA392 /* DataManager.swift */; };
+		FA949F1A26EA701000BAA392 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949F1926EA701000BAA392 /* NetworkRequest.swift */; };
+		FA949F1C26EA702E00BAA392 /* APIConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949F1B26EA702E00BAA392 /* APIConnection.swift */; };
+		FA949F9B26EA823B00BAA392 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949F9A26EA823B00BAA392 /* MoviesViewController.swift */; };
+		FA949F9D26EA826600BAA392 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949F9C26EA826600BAA392 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,6 @@
 		FA949ED326EA60AD00BAA392 /* MobiliumMovieAppCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobiliumMovieAppCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA949ED626EA60AD00BAA392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA949ED826EA60AD00BAA392 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA949EDA26EA60AD00BAA392 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA949EDD26EA60AD00BAA392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA949EDF26EA60B600BAA392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA949EE226EA60B600BAA392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		FA949EF426EA60B700BAA392 /* MobiliumMovieAppCaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobiliumMovieAppCaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA949EF826EA60B700BAA392 /* MobiliumMovieAppCaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiliumMovieAppCaseUITests.swift; sourceTree = "<group>"; };
 		FA949EFA26EA60B700BAA392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA949F0E26EA66EB00BAA392 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		FA949F1126EA69F700BAA392 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		FA949F1726EA6F9600BAA392 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FA949F1926EA701000BAA392 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		FA949F1B26EA702E00BAA392 /* APIConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnection.swift; sourceTree = "<group>"; };
+		FA949F9A26EA823B00BAA392 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		FA949F9C26EA826600BAA392 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +111,14 @@
 		FA949ED526EA60AD00BAA392 /* MobiliumMovieAppCase */ = {
 			isa = PBXGroup;
 			children = (
-				FA949ED626EA60AD00BAA392 /* AppDelegate.swift */,
-				FA949ED826EA60AD00BAA392 /* SceneDelegate.swift */,
-				FA949EDA26EA60AD00BAA392 /* ViewController.swift */,
-				FA949EDC26EA60AD00BAA392 /* Main.storyboard */,
-				FA949EDF26EA60B600BAA392 /* Assets.xcassets */,
-				FA949EE126EA60B600BAA392 /* LaunchScreen.storyboard */,
-				FA949EE426EA60B600BAA392 /* Info.plist */,
+				FA949F9526EA818100BAA392 /* Views */,
+				FA949F1326EA6AF900BAA392 /* Resources */,
+				FA949F1026EA67E900BAA392 /* Helpers */,
+				FA949F0926EA664600BAA392 /* View Controllers */,
+				FA949F0826EA641E00BAA392 /* Storyboards */,
+				FA949F0726EA640A00BAA392 /* Models */,
+				FA949F0626EA63F300BAA392 /* Application Delegate */,
+				FA949F1426EA6B1600BAA392 /* Supporting Files */,
 			);
 			path = MobiliumMovieAppCase;
 			sourceTree = "<group>";
@@ -126,6 +139,139 @@
 				FA949EFA26EA60B700BAA392 /* Info.plist */,
 			);
 			path = MobiliumMovieAppCaseUITests;
+			sourceTree = "<group>";
+		};
+		FA949F0626EA63F300BAA392 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FA949ED826EA60AD00BAA392 /* SceneDelegate.swift */,
+				FA949ED626EA60AD00BAA392 /* AppDelegate.swift */,
+			);
+			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		FA949F0726EA640A00BAA392 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA949F0826EA641E00BAA392 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA949EE126EA60B600BAA392 /* LaunchScreen.storyboard */,
+				FA949EDC26EA60AD00BAA392 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA949F0926EA664600BAA392 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA949F0C26EA66B800BAA392 /* Root View Controller */,
+				FA949F9626EA81A400BAA392 /* Movies View Controller */,
+				FA949F9726EA81B200BAA392 /* Movie Detail View Controller */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FA949F0C26EA66B800BAA392 /* Root View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA949F0D26EA66CC00BAA392 /* View Models */,
+				FA949F1126EA69F700BAA392 /* RootViewController.swift */,
+			);
+			path = "Root View Controller";
+			sourceTree = "<group>";
+		};
+		FA949F0D26EA66CC00BAA392 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA949F0E26EA66EB00BAA392 /* RootViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		FA949F1026EA67E900BAA392 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA949F1626EA6F8200BAA392 /* Network Manager */,
+				FA949F1526EA6F7000BAA392 /* Data Manager */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA949F1326EA6AF900BAA392 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA949EDF26EA60B600BAA392 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA949F1426EA6B1600BAA392 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA949EE426EA60B600BAA392 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA949F1526EA6F7000BAA392 /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FA949F1726EA6F9600BAA392 /* DataManager.swift */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		FA949F1626EA6F8200BAA392 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FA949F1926EA701000BAA392 /* NetworkRequest.swift */,
+				FA949F1B26EA702E00BAA392 /* APIConnection.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		FA949F9526EA818100BAA392 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA949F9626EA81A400BAA392 /* Movies View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA949F9826EA820D00BAA392 /* View Models */,
+				FA949F9A26EA823B00BAA392 /* MoviesViewController.swift */,
+			);
+			path = "Movies View Controller";
+			sourceTree = "<group>";
+		};
+		FA949F9726EA81B200BAA392 /* Movie Detail View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA949F9926EA821600BAA392 /* View Models */,
+				FA949F9C26EA826600BAA392 /* MovieDetailViewController.swift */,
+			);
+			path = "Movie Detail View Controller";
+			sourceTree = "<group>";
+		};
+		FA949F9826EA820D00BAA392 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		FA949F9926EA821600BAA392 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +404,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA949EDB26EA60AD00BAA392 /* ViewController.swift in Sources */,
+				FA949F1226EA69F700BAA392 /* RootViewController.swift in Sources */,
+				FA949F1826EA6F9600BAA392 /* DataManager.swift in Sources */,
+				FA949F0F26EA66EB00BAA392 /* RootViewModel.swift in Sources */,
 				FA949ED726EA60AD00BAA392 /* AppDelegate.swift in Sources */,
+				FA949F1A26EA701000BAA392 /* NetworkRequest.swift in Sources */,
+				FA949F1C26EA702E00BAA392 /* APIConnection.swift in Sources */,
 				FA949ED926EA60AD00BAA392 /* SceneDelegate.swift in Sources */,
+				FA949F9D26EA826600BAA392 /* MovieDetailViewController.swift in Sources */,
+				FA949F9B26EA823B00BAA392 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MobiliumMovieAppCase/Info.plist;
+				INFOPLIST_FILE = "MobiliumMovieAppCase/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +607,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MobiliumMovieAppCase/Info.plist;
+				INFOPLIST_FILE = "MobiliumMovieAppCase/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
