@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationBar" customModule="MobiliumMovieAppCase" customModuleProvider="target">
+            <connections>
+                <outlet property="titleLabel" destination="ef1-wW-mHs" id="xAO-ZJ-IkH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTT-q4-U1e">
+                    <rect key="frame" x="0.0" y="0.0" width="428" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K8-Mp-ZDX">
+                            <rect key="frame" x="10" y="8" width="16" height="24"/>
+                            <state key="normal" image=" Back Arrow Icon"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="t3g-UR-qCc"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moonrise Kingdom (2012)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef1-wW-mHs">
+                            <rect key="frame" x="34" y="8" width="360" height="24"/>
+                            <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ef1-wW-mHs" secondAttribute="trailing" constant="34" id="0OI-rC-azg"/>
+                        <constraint firstItem="ef1-wW-mHs" firstAttribute="top" secondItem="eTT-q4-U1e" secondAttribute="top" constant="8" id="Uru-r2-ceE"/>
+                        <constraint firstItem="6K8-Mp-ZDX" firstAttribute="leading" secondItem="eTT-q4-U1e" secondAttribute="leading" constant="10" id="WNn-vm-hnB"/>
+                        <constraint firstAttribute="height" constant="40" id="dv4-O6-7vH"/>
+                        <constraint firstItem="ef1-wW-mHs" firstAttribute="leading" secondItem="6K8-Mp-ZDX" secondAttribute="leading" constant="24" id="e5h-mt-O1u"/>
+                        <constraint firstAttribute="bottom" secondItem="6K8-Mp-ZDX" secondAttribute="bottom" constant="8" id="fjD-wC-n1O"/>
+                        <constraint firstItem="6K8-Mp-ZDX" firstAttribute="top" secondItem="eTT-q4-U1e" secondAttribute="top" constant="8" id="gUn-zw-wRo"/>
+                        <constraint firstAttribute="bottom" secondItem="ef1-wW-mHs" secondAttribute="bottom" constant="8" id="jI0-kO-RxJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eTT-q4-U1e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5pm-jY-zM6"/>
+                <constraint firstItem="eTT-q4-U1e" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Rcn-6X-J1C"/>
+                <constraint firstItem="eTT-q4-U1e" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="khd-90-bvQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-39.130434782608695" y="-166.74107142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name=" Back Arrow Icon" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

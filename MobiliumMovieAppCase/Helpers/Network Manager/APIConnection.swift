@@ -10,6 +10,8 @@ import Foundation
 struct Domain {
     static let baseUrl: String = "https://api.themoviedb.org/3"
     static let apiKey: String = "ec2a6b106a323e0d4679e2c1fffad8c5"
+    static let imdbUrl: String = "https://imdb.com/title/"
+    static let tmdbImageUrl: String = "https://image.tmdb.org/t/p/w500/"
 }
 
 // - MARK: Enpoint URL's
@@ -20,7 +22,7 @@ enum APIEndpoint: String {
     case getUpComing = "/movie/upcoming"
     case getMovie = "/movie/{movie_id}"
     
-    var string: String {
+    var name: String {
         return self.rawValue
     }
         

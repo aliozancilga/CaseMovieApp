@@ -7,27 +7,51 @@
 
 import Foundation
 
-struct MovieModel: Codable {
+struct MovieModel: Decodable {
     
-    var results: [MovieData]
+    var page: Int?
+    var results: [Movie]?
 }
 
-struct MovieData: Codable {
+struct Movie: Decodable {
     
-    var id: String?
+    var id: Int
     var title: String?
-    var orginalTitle: String?
-    var overView: String?
+    var backdropPath: String?
+    var overview: String?
     var posterPath: String?
-    var vote: Double?
+    var voteAverage: Double?
     var releaseDate: String?
     
+    
     enum CodingKeys: String, CodingKey {
-        case id, title
-        case vote = "vote_average"
+        case id, title, overview
+        case voteAverage = "vote_average"
         case posterPath = "poster_path"
-        case overView = "over_view"
-        case orginalTitle = "orginal_title"
         case releaseDate = "release_date"
+        case backdropPath = "backdrop_path"
     }
+}
+
+struct MovieDetail: Decodable {
+    
+    var id: Int
+    var title: String?
+    var overview: String?
+    var backdropPath: String?
+    var posterPath: String?
+    var imdbId: String?
+    var voteAverage: Double?
+    var releaseDate: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, title, overview
+        case voteAverage = "vote_average"
+        case posterPath = "poster_path"
+        case backdropPath = "backdrop_path"
+        case imdbId = "imdb_id"
+        case releaseDate = "release_date"
+
+    }
+
 }

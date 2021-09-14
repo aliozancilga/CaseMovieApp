@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DataManager {
+struct DataManager: MovieAPIProtocol {
     
     // MARK: Life Cycle
     
@@ -24,63 +24,34 @@ struct DataManager {
 
 extension DataManager {
     
-    func getUpComingMovies(completion: @escaping (_ status: Bool, _ statusMessage: String, _ data: String?) -> ()) {
+    func getUpComingMovies(completion: @escaping (Result<MovieModel, GenericError>) -> ()) {
         
-        // Failure closure
-        func failure(_ message: String) {
-            completion(false, message, nil)
-        }
-        
-        // Prepare params
+        // Query params
         var queryParams = Parameters()
         queryParams[keys.apiKey] = Domain.apiKey
         
-        // Send Request
-        network.request(path: APIEndpoint.getUpComing, method: .get, headers: HTTPHeaders(), pathParams: PathParameters(), queryParams: queryParams, body: Data()) { networkStatus, responseStatus, data in
-                
-        }
-        
+        network.request(path: .getUpComing, method: .get, headers: HTTPHeaders(), pathParams: PathParameters(), queryParams: queryParams, body: Data(), completion: completion)
     }
     
-    func getNowPlayingMovies(completion: @escaping (_ status: Bool, _ statusMessage: String, _ data: String?) -> ()) {
+    func getNowPlayingMovies(completion: @escaping (Result<MovieModel, GenericError>) -> ()) {
         
-        // Failure closure
-        func failure(_ message: String) {
-            completion(false, message, nil)
-        }
-        
-        
-        // Prepare params
+        // Query params
         var queryParams = Parameters()
         queryParams[keys.apiKey] = Domain.apiKey
         
-        // Send Request
-        network.request(path: APIEndpoint.getNowPlaying, method: .get, headers: HTTPHeaders(), pathParams: PathParameters(), queryParams: Parameters(), body: Data()) { networkStatus, responseStatus, data in
-                 
-        }
+        network.request(path: .getNowPlaying, method: .get, headers: HTTPHeaders(), pathParams: PathParameters(), queryParams: queryParams, body: Data(), completion: completion)
     }
     
-    
-    func getMovieDetail(movieId: String, completion: @escaping (_ status: Bool, _ statusMessage: String, _ data: String?) -> ()) {
+    func getMovieDetail(movieId: Int, completion: @escaping (Result<MovieDetail, GenericError>) -> ()) {
         
-        // Failure closure
-        func failure(_ message: String) {
-            completion(false, message, nil)
-        }
+        // Query params
+        var queryParams = Parameters()
+        queryParams[keys.apiKey] = Domain.apiKey
         
+        // Path params
         var parameter = PathParameters()
-        parameter[keys.movieId] = movieId
-
+        parameter[keys.movieId] = String(movieId)
         
-        // Prepare params
-        var queryParams = Parameters()
-        queryParams[keys.apiKey] = Domain.apiKey
-        
-        
-        // Send Request
-        network.request(path: APIEndpoint.getMovie, method: .get, headers: HTTPHeaders(), pathParams: parameter, queryParams: Parameters(), body: Data()) { networkStatus, responseStatus, data in
-        
-        }
+        network.request(path: .getMovie, method: .get, headers: HTTPHeaders(), pathParams: parameter, queryParams: queryParams, body: Data(), completion: completion)
     }
-
 }

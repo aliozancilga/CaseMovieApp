@@ -15,10 +15,11 @@ class Parser {
         guard let _data = data else {
             return nil
         }
-        
+ 
         // Parsing
         do {
-            let modal = try JSONDecoder().decode(T.self, from: _data)
+            let jsonDecoder = JSONDecoder()
+            let modal = try jsonDecoder.decode(T.self, from: _data)
             return modal
         }catch {
             print("Parsing Error")
