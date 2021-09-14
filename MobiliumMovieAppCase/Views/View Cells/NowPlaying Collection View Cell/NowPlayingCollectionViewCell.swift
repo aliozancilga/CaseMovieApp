@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NowPlayingCollectionViewCell: UICollectionViewCell {
     
@@ -28,8 +29,7 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
       }
     
     func setData() {
-      
-        self.posterImage.downloaded(from: Domain.tmdbImageUrl + (self.dataSource?.backdropPath)!, contentMode: .scaleAspectFill)
+        self.posterImage.sd_setImage(with: URL(string: (Domain.tmdbImageUrl + (self.dataSource?.backdropPath)!)), placeholderImage: #imageLiteral(resourceName: "no-image"), options: SDWebImageOptions.scaleDownLargeImages, context: nil)
         DispatchQueue.main.async {
             
             self.titleLabel.text =  self.dataSource?.title

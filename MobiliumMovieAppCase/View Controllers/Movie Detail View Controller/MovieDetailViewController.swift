@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import WebKit
+import SDWebImage
 
 class MovieDetailViewController: UIViewController {
 
@@ -79,7 +79,7 @@ class MovieDetailViewController: UIViewController {
             self.movieVote.text = "\(String(describing: vote))"
         }
         if let imageUrl = self.movieDetailViewModel.movie?.backdropPath {
-            self.posterImage.downloaded(from: Domain.tmdbImageUrl + imageUrl, contentMode: .scaleAspectFill)
+            self.posterImage.sd_setImage(with: URL(string: (Domain.tmdbImageUrl + imageUrl)), placeholderImage: #imageLiteral(resourceName: "no-image"), options: SDWebImageOptions.scaleDownLargeImages, context: nil)
         }
     }
 }
