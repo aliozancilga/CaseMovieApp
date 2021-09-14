@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum MovieState {
+    case upComing
+    case nowPlaying
+}
+
 class MoviesViewController: UIViewController {
 
     // MARK: - Connection Object
@@ -43,9 +48,6 @@ class MoviesViewController: UIViewController {
         self.moviesViewModel.handleServiceFinish()
     }
  
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
     
     func configureView() {
         
@@ -65,12 +67,18 @@ class MoviesViewController: UIViewController {
         self.moviesViewModel.handleServiceFinish()
      }
     
-    func movieDetailController(indexPath: IndexPath) {
+    func movieDetailController(indexPath: IndexPath,with state: MovieState ) {
         guard let movieDetailController = UIStoryboard.main.instantiateViewController(withIdentifier: MovieDetailViewController.storyboardIndentifier) as? MovieDetailViewController else {
                 fatalError("Unable to Instantiate Movie Details View Controller")
             }
+        if state == .nowPlaying {
           movieDetailController.movieId = self.moviesViewModel.nowPlayingMovies[indexPath.row].id
           movieDetailController.navigationTitle = self.moviesViewModel.nowPlayingMovies[indexPath.row].title
+        }else {
+            movieDetailController.movieId = self.moviesViewModel.upComingMovies[indexPath.row].id
+            movieDetailController.navigationTitle = self.moviesViewModel.upComingMovies[indexPath.row].title
+
+        }
           present(movieDetailController, animated: true, completion: nil)
         
     }
@@ -95,7 +103,7 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         DispatchQueue.main.async {
-            self.movieDetailController(indexPath: indexPath)
+            self.movieDetailController(indexPath: indexPath, with: .upComing)
         }
     }
     
@@ -122,7 +130,7 @@ extension MoviesViewController: UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         DispatchQueue.main.async {
-            self.movieDetailController(indexPath: indexPath)
+            self.movieDetailController(indexPath: indexPath, with: .nowPlaying)
         }
     }
     
@@ -132,18 +140,13 @@ extension MoviesViewController: UICollectionViewDelegate,
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        DispatchQueue.main.async {
-        let scrollPos = scrollView.contentOffset.x / self.collectionView.frame.width
-      
-        self.sliderControl.currentPage = Int(round(scrollPos))
-        let current = self.sliderControl.currentPage
-        let indexPath = IndexPath(item: current, section: 0)
-        self.collectionView.scrollToItem(at: indexPath, at: .right, animated: true)
-      }
+             let scrollPos = scrollView.contentOffset.x / self.collectionView.frame.width
+          
+            self.sliderControl.currentPage = Int(round(scrollPos))
+            currentPageIndex = self.sliderControl.currentPage
     }
-    
- 
 }
+
 extension MoviesViewController {
     fileprivate func bindViewModel() {
         self.moviesViewModel.changeHandler = { [weak self ] state in

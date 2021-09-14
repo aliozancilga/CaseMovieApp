@@ -71,10 +71,14 @@ class MovieDetailViewController: UIViewController {
     func UISetup() {
         
         let movie = self.movieDetailViewModel.movie
-        
-        self.movieTitle.text = movie?.title
+        if let title = movie?.title {
+            self.movieTitle.text =  title + " (" + (movie?.releaseDate?.toDateString(dateFormatter: DateFormatter(format: "yyyy-mm-dd"), outputFormat: "yyyy"))! + ")"
+        }
+
+        if let date = movie?.releaseDate {
+            self.releaseDate.text = date.toDateString(dateFormatter: DateFormatter(format: "yyyy-mm-dd"), outputFormat: "dd.mm.yyyy")
+        }
         self.movieDescription.text = movie?.overview
-        self.releaseDate.text = movie?.releaseDate
         if let vote = movie?.voteAverage {
             self.movieVote.text = "\(String(describing: vote))"
         }

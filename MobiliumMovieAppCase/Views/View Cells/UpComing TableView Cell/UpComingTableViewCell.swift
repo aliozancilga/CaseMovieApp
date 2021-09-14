@@ -33,17 +33,19 @@ class UpComingTableViewCell: UITableViewCell {
     }
     
     func setData() {
-        if let dateString = self.dataSource?.releaseDate {
-            
-          self.dateLabel.text = dateString
-        }
       
         if let imageUrl = self.dataSource?.backdropPath {
             self.posterImage.sd_setImage(with: URL(string: (Domain.tmdbImageUrl + imageUrl)), placeholderImage: #imageLiteral(resourceName: "no-image"), options: SDWebImageOptions.scaleDownLargeImages, context: nil)
         }
         DispatchQueue.main.async {
-            self.titleLabel.text = self.dataSource?.title
+            if let title = self.dataSource?.title {
+                self.titleLabel.text =  title + " (" + (self.dataSource?.releaseDate?.toDateString(dateFormatter: DateFormatter(format: "yyyy-mm-dd"), outputFormat: "yyyy"))! + ")"
+            }
             self.descriptionLabel.text = self.dataSource?.overview
+            if let dateString = self.dataSource?.releaseDate {
+                
+              self.dateLabel.text = dateString.toDateString(dateFormatter: DateFormatter(format: "yyyy-mm-dd"), outputFormat: "dd.mm.yyyy")
+            }
         }
     }
 }

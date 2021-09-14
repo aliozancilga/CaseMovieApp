@@ -31,27 +31,37 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="JQw-Tx-vOe">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="256"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="257"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" id="oA1-D4-Dki">
-                                            <rect key="frame" x="0.0" y="-3" width="428" height="258"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BAZ-YU-YVS">
-                                                <size key="itemSize" width="375" height="256"/>
-                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                            </collectionViewFlowLayout>
-                                            <cells/>
-                                            <connections>
-                                                <outlet property="dataSource" destination="EXh-fj-GkY" id="ud8-O0-1wD"/>
-                                                <outlet property="delegate" destination="EXh-fj-GkY" id="KQZ-Tw-bHn"/>
-                                            </connections>
-                                        </collectionView>
+                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vRm-WS-RU5">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="257"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vRm-WS-RU5" id="VmV-A8-VIX">
+                                                <rect key="frame" x="0.0" y="0.0" width="428" height="257"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" id="oA1-D4-Dki">
+                                                        <rect key="frame" x="0.0" y="0.0" width="428" height="260"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BAZ-YU-YVS">
+                                                            <size key="itemSize" width="375" height="256"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells/>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="EXh-fj-GkY" id="ud8-O0-1wD"/>
+                                                            <outlet property="delegate" destination="EXh-fj-GkY" id="KQZ-Tw-bHn"/>
+                                                        </connections>
+                                                    </collectionView>
+                                                </subviews>
+                                            </tableViewCellContentView>
+                                        </tableViewCell>
                                         <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QTu-Up-oRt">
-                                            <rect key="frame" x="0.0" y="214" width="428" height="42"/>
+                                            <rect key="frame" x="0.0" y="215" width="428" height="42"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="42" id="rak-hG-Jgr"/>
                                             </constraints>
@@ -87,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CiJ-xZ-a7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271.4953271028037" y="94.600431965442766"/>
+            <point key="canvasLocation" x="1269.5999999999999" y="93.103448275862078"/>
         </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="wE7-Hv-hpm">

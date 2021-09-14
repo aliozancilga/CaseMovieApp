@@ -31,9 +31,12 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
     func setData() {
         self.posterImage.sd_setImage(with: URL(string: (Domain.tmdbImageUrl + (self.dataSource?.backdropPath)!)), placeholderImage: #imageLiteral(resourceName: "no-image"), options: SDWebImageOptions.scaleDownLargeImages, context: nil)
         DispatchQueue.main.async {
-            
-            self.titleLabel.text =  self.dataSource?.title
-             self.descriptionLabel.text = self.dataSource?.overview
+            if let title = self.dataSource?.title {
+                self.titleLabel.text =  title + " (" + (self.dataSource?.releaseDate?.toDateString(dateFormatter: DateFormatter(format: "yyyy-mm-dd"), outputFormat: "yyyy"))! + ")"
+                
+                
+            }
+            self.descriptionLabel.text = self.dataSource?.overview
         }
     }
 }

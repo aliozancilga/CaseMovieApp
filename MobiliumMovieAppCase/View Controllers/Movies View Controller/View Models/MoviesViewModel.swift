@@ -60,7 +60,7 @@ class MoviesViewModel: MoviesViewModelProtocol {
                 self.dispatchGroup.leave()
                case .failure(let error):
                 self.changeState(with: .failure(error))
-                 self.dispatchGroup.leave()
+                self.dispatchGroup.leave()
             }
         }
     }

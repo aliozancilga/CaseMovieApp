@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -53,6 +53,7 @@
 		FAD4059526EF4F8000873B26 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAD4058926EF4F7F00873B26 /* SF-Pro-Text-Bold.otf */; };
 		FAD4059626EF4F8000873B26 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAD4058A26EF4F7F00873B26 /* SF-Pro-Text-Semibold.otf */; };
 		FAD4059726EF4F8000873B26 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FAD4058B26EF4F7F00873B26 /* SF-Pro-Text-Medium.otf */; };
+		FAFAE03C26F0E2C80004237A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFAE03B26F0E2C80004237A /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		FAD4058926EF4F7F00873B26 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		FAD4058A26EF4F7F00873B26 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		FAD4058B26EF4F7F00873B26 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		FAFAE03B26F0E2C80004237A /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +183,6 @@
 				00ADC7162A43831A7B7F9871 /* Pods-MobiliumMovieAppCaseTests.debug.xcconfig */,
 				EC9D61A6360BA55877AAD5E1 /* Pods-MobiliumMovieAppCaseTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -393,6 +394,7 @@
 				FA949FC826EB509A00BAA392 /* UIStoryBoard.swift */,
 				FAD4056F26EDC53500873B26 /* ViewCell.swift */,
 				FA72F04026F0B41A00AA090A /* UIView.swift */,
+				FAFAE03B26F0E2C80004237A /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -720,6 +722,7 @@
 				FA72F04426F0C36900AA090A /* Alert.swift in Sources */,
 				FAD4057926EE3FC200873B26 /* MovieDetailViewModel.swift in Sources */,
 				FA949FC926EB509A00BAA392 /* UIStoryBoard.swift in Sources */,
+				FAFAE03C26F0E2C80004237A /* Date.swift in Sources */,
 				FA949FA226EA964A00BAA392 /* String.swift in Sources */,
 				FA949F1826EA6F9600BAA392 /* DataManager.swift in Sources */,
 				FA949F9F26EA94AB00BAA392 /* Parser.swift in Sources */,
@@ -913,7 +916,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MovieAppCase.MobiliumMovieAppCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -932,7 +935,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MovieAppCase.MobiliumMovieAppCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
