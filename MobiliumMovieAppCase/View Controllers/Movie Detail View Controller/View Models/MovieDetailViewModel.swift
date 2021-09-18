@@ -35,8 +35,8 @@ class MovieDetailViewModel: MovieDetailsProtocol {
             
             switch result {
             case .success(let data):
-                self.changeState(with: .success)
                 self.movie = data
+                self.changeState(with: .success)
             case .failure(let error):
                 self.changeState(with: .failure(error))
             }

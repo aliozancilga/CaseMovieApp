@@ -26,7 +26,6 @@
 		FA949F9B26EA823B00BAA392 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949F9A26EA823B00BAA392 /* MoviesViewController.swift */; };
 		FA949F9D26EA826600BAA392 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949F9C26EA826600BAA392 /* MovieDetailViewController.swift */; };
 		FA949F9F26EA94AB00BAA392 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949F9E26EA94AB00BAA392 /* Parser.swift */; };
-		FA949FA226EA964A00BAA392 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949FA126EA964A00BAA392 /* String.swift */; };
 		FA949FA426EA96D200BAA392 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949FA326EA96D200BAA392 /* Messages.swift */; };
 		FA949FA626EAA37100BAA392 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949FA526EAA37100BAA392 /* Reachability.swift */; };
 		FA949FAC26EAB4EF00BAA392 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949FAB26EAB4EF00BAA392 /* MovieModel.swift */; };
@@ -38,6 +37,8 @@
 		FA949FC926EB509A00BAA392 /* UIStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA949FC826EB509A00BAA392 /* UIStoryBoard.swift */; };
 		FAA4CA3526EC92DA002DCCD0 /* MovieAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA4CA3426EC92DA002DCCD0 /* MovieAPIProtocol.swift */; };
 		FAA4CA7326ED01DD002DCCD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA4CA7226ED01DD002DCCD0 /* Main.storyboard */; };
+		FACAEA6926F5EB5300A0438D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACAEA6826F5EB5300A0438D /* String.swift */; };
+		FACAEA6B26F5F5B600A0438D /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACAEA6A26F5F5B500A0438D /* UIDevice.swift */; };
 		FAD4057026EDC53500873B26 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4056F26EDC53500873B26 /* ViewCell.swift */; };
 		FAD4057726EE2B0900873B26 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4057626EE2B0900873B26 /* MoviesViewModel.swift */; };
 		FAD4057926EE3FC200873B26 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4057826EE3FC200873B26 /* MovieDetailViewModel.swift */; };
@@ -105,7 +106,6 @@
 		FA949F9A26EA823B00BAA392 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		FA949F9C26EA826600BAA392 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		FA949F9E26EA94AB00BAA392 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		FA949FA126EA964A00BAA392 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = ../../../Assets/String.swift; sourceTree = "<group>"; };
 		FA949FA326EA96D200BAA392 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		FA949FA526EAA37100BAA392 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		FA949FAB26EAB4EF00BAA392 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
@@ -117,6 +117,8 @@
 		FA949FC826EB509A00BAA392 /* UIStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryBoard.swift; sourceTree = "<group>"; };
 		FAA4CA3426EC92DA002DCCD0 /* MovieAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIProtocol.swift; sourceTree = "<group>"; };
 		FAA4CA7226ED01DD002DCCD0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FACAEA6826F5EB5300A0438D /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		FACAEA6A26F5F5B500A0438D /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		FAD4056F26EDC53500873B26 /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		FAD4057626EE2B0900873B26 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		FAD4057826EE3FC200873B26 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
@@ -389,12 +391,13 @@
 		FA949FA026EA963A00BAA392 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FA949FA126EA964A00BAA392 /* String.swift */,
+				FACAEA6826F5EB5300A0438D /* String.swift */,
 				FA949FBB26EB321200BAA392 /* UIViewController.swift */,
 				FA949FC826EB509A00BAA392 /* UIStoryBoard.swift */,
 				FAD4056F26EDC53500873B26 /* ViewCell.swift */,
 				FA72F04026F0B41A00AA090A /* UIView.swift */,
 				FAFAE03B26F0E2C80004237A /* Date.swift */,
+				FACAEA6A26F5F5B500A0438D /* UIDevice.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -721,11 +724,12 @@
 				FA17FD3826EFAFF1008E1B8D /* WebViewController.swift in Sources */,
 				FA72F04426F0C36900AA090A /* Alert.swift in Sources */,
 				FAD4057926EE3FC200873B26 /* MovieDetailViewModel.swift in Sources */,
+				FACAEA6B26F5F5B600A0438D /* UIDevice.swift in Sources */,
 				FA949FC926EB509A00BAA392 /* UIStoryBoard.swift in Sources */,
 				FAFAE03C26F0E2C80004237A /* Date.swift in Sources */,
-				FA949FA226EA964A00BAA392 /* String.swift in Sources */,
 				FA949F1826EA6F9600BAA392 /* DataManager.swift in Sources */,
 				FA949F9F26EA94AB00BAA392 /* Parser.swift in Sources */,
+				FACAEA6926F5EB5300A0438D /* String.swift in Sources */,
 				FA949ED726EA60AD00BAA392 /* AppDelegate.swift in Sources */,
 				FA949F1A26EA701000BAA392 /* NetworkRequest.swift in Sources */,
 				FA72F03F26F0B3D800AA090A /* ActivityIndicator.swift in Sources */,

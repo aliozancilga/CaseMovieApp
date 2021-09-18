@@ -74,13 +74,21 @@ class MoviesViewController: UIViewController {
         if state == .nowPlaying {
           movieDetailController.movieId = self.moviesViewModel.nowPlayingMovies[indexPath.row].id
           movieDetailController.navigationTitle = self.moviesViewModel.nowPlayingMovies[indexPath.row].title
-        }else {
+        }else if state == .upComing {
             movieDetailController.movieId = self.moviesViewModel.upComingMovies[indexPath.row].id
             movieDetailController.navigationTitle = self.moviesViewModel.upComingMovies[indexPath.row].title
 
         }
           present(movieDetailController, animated: true, completion: nil)
         
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if UIDevice.current.hasNotch {
+            return .default
+        } else {
+            return .lightContent
+        }
     }
     
 }
@@ -136,7 +144,7 @@ extension MoviesViewController: UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: self.view.frame.size.width, height: self.collectionView.frame.size.height)
+        return CGSize(width: self.collectionView.frame.size.width, height: self.collectionView.frame.size.height)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

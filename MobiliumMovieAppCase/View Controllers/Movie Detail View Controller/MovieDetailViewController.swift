@@ -94,10 +94,10 @@ extension MovieDetailViewController {
             guard let self = self else { return }
             switch state {
             case .success:
+                self.indicator.hide()
                 DispatchQueue.main.async {
                     self.UISetup()
                  }
-                self.indicator.hide()
              case .failure(let error):
                 self.indicator.hide()
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
